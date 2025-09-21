@@ -1,16 +1,16 @@
 window.addEventListener("load", () => {
-    const song = document.getElementById("song");
+    const test = document.getElementById("song");
 
-    if (song && song.paused) {
+    if (test && test.paused) {
         let play = document.getElementById("play");
 
         play.onclick = () => {
-            song.play()
+            test.play()
                 .then(() => {
                     play.classList.remove("show");
                 })
                 .catch((error) => {
-            play.classList.toggle("show", true);
+                    play.classList.toggle("show", true);
                     console.error("Playback failed:", error);
                 });
         };
